@@ -14,11 +14,16 @@ app.all('/*', function(req, res, next) {
 });
 
 
-app.get('/test', function(req, res) {
-    res.send(req.query);
+app.get('/empleados', function(req, res) {
+	var empleados = [];
+	empleados.push({
+		name:'jonathan',
+		age: 27
+	});
+    res.send(empleados);
 });
 app.post('/test', function(req, res) {
     res.send(req.body);
 });
 
-app.listen(4000);
+app.listen(3000);
